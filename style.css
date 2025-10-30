@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #faf8f6;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.title span {
+  color: #e63946;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.date {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.slider {
+  position: relative;
+  width: 90vw;
+  max-width: 420px;
+  height: 70vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slides img.active {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .slider {
+    height: 65vh;
+  }
+}
